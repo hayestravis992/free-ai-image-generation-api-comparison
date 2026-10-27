@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="670" viewBox="0 0 1200 670" role="img" aria-labelledby="title desc">
+<title id="title">How Cloudflare's shared daily Neurons allowance is consumed</title>
+<desc id="desc">A 10,000 Neurons per day Workers AI pool is shared by FLUX.1 schnell image calls and other Workers AI calls. Image consumption depends on 512 by 512 tiles and steps. A one-tile four-step example is 43.20 Neurons, not a guaranteed image count.</desc>
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#101b31"/><stop offset="1" stop-color="#192b42"/></linearGradient><linearGradient id="pool" x2="1" y2="0"><stop stop-color="#0c7f9b"/><stop offset="1" stop-color="#37bea8"/></linearGradient></defs>
+<rect width="1200" height="670" rx="28" fill="url(#bg)"/>
+<text x="56" y="75" font-family="Arial,Helvetica,sans-serif" font-size="31" font-weight="700" fill="#f4fbff">One shared pool, variable image cost</text>
+<text x="56" y="112" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#b9cbd9">Cloudflare Workers AI · documented units checked 27 Oct 2026</text>
+<rect x="300" y="158" width="600" height="112" rx="22" fill="url(#pool)"/>
+<text x="600" y="205" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="27" font-weight="700" fill="#ffffff">10,000 Neurons / day</text>
+<text x="600" y="240" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="17" fill="#ebffff">Shared across Workers AI · resets at 00:00 UTC</text>
+<path d="M600 270V308 M600 308H300 M600 308H900 M300 308V337 M900 308V337" fill="none" stroke="#8ccfe0" stroke-width="4" stroke-linecap="round"/>
+<rect x="58" y="337" width="486" height="188" rx="19" fill="#f7fbff"/>
+<circle cx="98" cy="378" r="17" fill="#37bea8"/><path d="M90 378h16M98 370v16" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+<text x="130" y="385" font-family="Arial,Helvetica,sans-serif" font-size="22" font-weight="700" fill="#142238">FLUX.1 schnell image call</text>
+<text x="88" y="433" font-family="Arial,Helvetica,sans-serif" font-size="20" fill="#142238">4.80 Neurons / 512 × 512 tile</text>
+<text x="88" y="466" font-family="Arial,Helvetica,sans-serif" font-size="20" fill="#142238">+ 9.60 Neurons / step</text>
+<text x="88" y="501" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#485a6e">Size and step count change the draw.</text>
+<rect x="656" y="337" width="486" height="188" rx="19" fill="#eaf1f7"/>
+<circle cx="696" cy="378" r="17" fill="#8299ad"/><path d="M688 378h16" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+<text x="728" y="385" font-family="Arial,Helvetica,sans-serif" font-size="22" font-weight="700" fill="#142238">Other Workers AI calls</text>
+<text x="686" y="435" font-family="Arial,Helvetica,sans-serif" font-size="19" fill="#263c50">They draw from the same daily pool.</text>
+<text x="686" y="471" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#485a6e">Remaining capacity depends on all usage.</text>
+<rect x="58" y="553" width="1084" height="75" rx="15" fill="#253950"/>
+<text x="84" y="584" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="700" fill="#dff9f4">Illustration:</text>
+<text x="230" y="584" font-family="Arial,Helvetica,sans-serif" font-size="20" fill="#ffffff">1 tile + 4 steps = 43.20 Neurons</text>
+<text x="84" y="611" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#bdd1df">Formula example only — not a tested request, recommended setting, or guaranteed images/day.</text>
+</svg>
